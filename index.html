@@ -133,7 +133,7 @@
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">4</span></a>
+    <a href="/archives/" rel="section"><i class="archive fa-fw"></i>归档<span class="badge">5</span></a>
 
   </li>
   </ul>
@@ -159,6 +159,101 @@
 
           <div class="content index posts-expand">
             
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BA%8C/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="猪猪">
+      <meta itemprop="description" content="奥利给">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="猪猪的学习记录">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E4%BA%8C/" class="post-title-link" itemprop="url">深度学习二</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-25 09:13:34 / 修改时间：09:14:15" itemprop="dateCreated datePublished" datetime="2020-07-25T09:13:34+08:00">2020-07-25</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">深度学习</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>机器学习学习笔记一：</p>
+<ol>
+<li>机器学习分类</li>
+</ol>
+<ul>
+<li>监督学习：给算法了一个数据集，其中包含了正确答案，目的是给出更多正确答 案。（回归问题—连续值、分类问题—离散值）——算法预测</li>
+<li>无监督学习:数据集没有任何标签，不知道数据要干什么，要找出数据的类型结构。（聚类算法、鸡尾酒会算法—分开混合音源）    </li>
+</ul>
+<ol start="2">
+<li><p>模型</p>
+<p>回归模型（监督学习）：</p>
+<p>e.g 房价预测问题</p>
+<p>m：训练样本数量  x：输入变量（特征） y：输出变量（目标）</p>
+<p>根据训练集输出假设函数h（引导x得到y）</p>
+<p>代价函数（平方误差函数）：</p>
+<p>模型参数的选取决定了曲线的形状。根据数据集来拟合参数。找到的参数要使代价函数尽可能小。代价函数是关于参数的函数。</p>
+</li>
+</ol>
+<p>$$<br>J(\theta)=\frac{1}{2m}\sum(h(x)-y)^2<br>$$<br>  图像维数是变量数+1，这里就引入了等高线图。    </p>
+<p>  梯度下降算法（最小化代价函数）：<br>$$<br>两个参数\theta初始化为0，逐步改变直到代价函数最小。<br>$$<br>  重复,同步更新两个参数（引入temp，同时替换）<br>$$<br>\theta j := \theta j - \alpha \frac{\delta}{\delta\theta j}J(\theta 0,\theta 1)(for j=1andj=0)<br>$$</p>
+<p>$$<br>\alpha 学习率 控制梯度下降速度。<br>$$</p>
+<p>  接近局部最低时，导数越小，下降幅度越小。</p>
+<p>  线性回归的梯度下降： </p>
+<p>  线性回归模型(x省略上标i)<br>$$<br>h\theta(x) = \theta0 + \theta1x<br>$$</p>
+<p>$$<br>J(\theta0,\theta1) =\frac{1}{2m}\sum(h\theta(x)-y)^2<br>$$<br>  用梯度下降法让J最小化。</p>
+<p>  Batch梯度下降：重复(x省略上标i)</p>
+<p>$$<br>\theta 0 := \theta 0 - \alpha\frac{1}{m}\sum(h\theta(x)-y)<br>$$</p>
+<p>$$<br>\theta 1 := \theta 1 - \alpha\frac{1}{m}\sum(h\theta(x)-y)·x<br>$$</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
       
   
   
@@ -688,7 +783,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>

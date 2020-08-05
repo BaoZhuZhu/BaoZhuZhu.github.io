@@ -386,10 +386,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-25 09:13:34 / 修改时间：09:14:15" itemprop="dateCreated datePublished" datetime="2020-07-25T09:13:34+08:00">2020-07-25</time>
+              <time title="创建时间：2020-07-25 09:13:34" itemprop="dateCreated datePublished" datetime="2020-07-25T09:13:34+08:00">2020-07-25</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-05 20:08:38" itemprop="dateModified" datetime="2020-08-05T20:08:38+08:00">2020-08-05</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -429,16 +435,16 @@
 <p>模型参数的选取决定了曲线的形状。根据数据集来拟合参数。找到的参数要使代价函数尽可能小。代价函数是关于参数的函数。</p>
 </li>
 </ol>
-<p>$$<br>J(\theta)=\frac{1}{2m}\sum(h(x)-y)^2<br>$$<br>  图像维数是变量数+1，这里就引入了等高线图。    </p>
+<p>$$<br>J(\theta)=\frac{1}{2m}\sum(h(x)^{(i)}-y)^2<br>$$<br>  图像维数是变量数+1，这里就引入了等高线图。    </p>
 <p>  梯度下降算法（最小化代价函数）：<br>$$<br>两个参数\theta初始化为0，逐步改变直到代价函数最小。<br>$$<br>  重复,同步更新两个参数（引入temp，同时替换）<br>$$<br>\theta j := \theta j - \alpha \frac{\delta}{\delta\theta j}J(\theta 0,\theta 1)(for j=1andj=0)<br>$$</p>
 <p>$$<br>\alpha 学习率 控制梯度下降速度。<br>$$</p>
 <p>  接近局部最低时，导数越小，下降幅度越小。</p>
 <p>  线性回归的梯度下降： </p>
 <p>  线性回归模型(x省略上标i)<br>$$<br>h\theta(x) = \theta0 + \theta1x<br>$$</p>
-<p>$$<br>J(\theta0,\theta1) =\frac{1}{2m}\sum(h\theta(x)-y)^2<br>$$<br>  用梯度下降法让J最小化。</p>
+<p>$$<br>J(\theta0,\theta1) =\frac{1}{2m}\sum(h\theta(x)^{(i)}-y)^2<br>$$<br>  用梯度下降法让J最小化。</p>
 <p>  Batch梯度下降：重复(x省略上标i)</p>
-<p>$$<br>\theta 0 := \theta 0 - \alpha\frac{1}{m}\sum(h\theta(x)-y)<br>$$</p>
-<p>$$<br>\theta 1 := \theta 1 - \alpha\frac{1}{m}\sum(h\theta(x)-y)·x<br>$$</p>
+<p>$$<br>\theta 0 := \theta 0 - \alpha\frac{1}{m}\sum(h\theta(x)^{i}-y)<br>$$</p>
+<p>$$<br>\theta 1 := \theta 1 - \alpha\frac{1}{m}\sum(h\theta(x)^{(i)}-y)·x<br>$$</p>
 
       
     </div>

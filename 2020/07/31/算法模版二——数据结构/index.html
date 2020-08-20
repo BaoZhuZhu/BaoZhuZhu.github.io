@@ -20,15 +20,15 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="二、数据结构  数组模拟单链表 1234567891011121314&#x2F;&#x2F;邻接表存储图和树void add_head(int x)&amp;#123;    n[idx]&#x3D;x;&#x2F;&#x2F;当前节点的值为x    ne[idx]&#x3D;head;&#x2F;&#x2F;当前节点的后一个节点为上一个head    head&#x3D;idx++;&#x2F;&#x2F;idx为头节点，并且++&amp;#125;void add(int k,int x)&amp;#123;    n[i">
+  <meta name="description" content="二、数据结构">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法模版二——数据结构">
 <meta property="og:url" content="http://yoursite.com/2020/07/31/%E7%AE%97%E6%B3%95%E6%A8%A1%E7%89%88%E4%BA%8C%E2%80%94%E2%80%94%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/index.html">
 <meta property="og:site_name" content="猪猪的学习记录">
-<meta property="og:description" content="二、数据结构  数组模拟单链表 1234567891011121314&#x2F;&#x2F;邻接表存储图和树void add_head(int x)&amp;#123;    n[idx]&#x3D;x;&#x2F;&#x2F;当前节点的值为x    ne[idx]&#x3D;head;&#x2F;&#x2F;当前节点的后一个节点为上一个head    head&#x3D;idx++;&#x2F;&#x2F;idx为头节点，并且++&amp;#125;void add(int k,int x)&amp;#123;    n[i">
+<meta property="og:description" content="二、数据结构">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-31T12:04:33.000Z">
-<meta property="article:modified_time" content="2020-08-20T06:39:14.334Z">
+<meta property="article:modified_time" content="2020-08-20T06:53:46.868Z">
 <meta property="article:author" content="猪猪">
 <meta name="twitter:card" content="summary">
 
@@ -196,7 +196,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-08-20 14:39:14" itemprop="dateModified" datetime="2020-08-20T14:39:14+08:00">2020-08-20</time>
+                <time title="修改时间：2020-08-20 14:53:46" itemprop="dateModified" datetime="2020-08-20T14:53:46+08:00">2020-08-20</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -220,6 +220,8 @@
 
       
         <p>二、数据结构</p>
+<a id="more"></a>
+
 <ol>
 <li><p>数组模拟单链表</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//邻接表存储图和树</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add_head</span><span class="params">(<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    n[idx]=x;<span class="comment">//当前节点的值为x</span></span><br><span class="line">    ne[idx]=head;<span class="comment">//当前节点的后一个节点为上一个head</span></span><br><span class="line">    head=idx++;<span class="comment">//idx为头节点，并且++</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">add</span><span class="params">(<span class="keyword">int</span> k,<span class="keyword">int</span> x)</span></span>&#123;</span><br><span class="line">    n[idx]=x;<span class="comment">//当前节点的值为x</span></span><br><span class="line">    ne[idx]=ne[k];<span class="comment">//当前节点的后一个节点为上一个节点k的下一个</span></span><br><span class="line">    ne[k]=idx++;<span class="comment">//k节点的下一个为idx，并且++</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">remove</span><span class="params">(<span class="keyword">int</span> k)</span></span>&#123;</span><br><span class="line">    ne[k]=ne[ne[k]];<span class="comment">//k节点的下一个节点为下下个节点</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
